@@ -2,17 +2,37 @@
 #include <cstdlib>
 #include <ctime>
 
-// Homework 7 — Your Name
+using std::cout;
+
+// Homework 7 — Joe Barron
 // CIS 5 Week 07 · Odd and Even
 
 int main() {
   const int N = 20;
   int values[N];
 
-  srand(static_cast<unsigned>(time(nullptr)));
-  for (int i = 0; i < N; ++i) {
-    values[i] = rand() % 100;
+  srand(static_cast<unsigned>(time(nullptr))); // Seed the random number generator
+  for (int i = 0; i < N; ++i) { // Fill the array with random values
+	  values[i] = rand() % 100; // Random values between 0 and 99
   }
+
+  for (int i = 0; i < N; ++i) // Print the array values
+  { 
+	  if (values[i] % 2 == 0) // Check if the value is even, used operator == to check if the value is even
+	  {
+		
+		  cout << "[" << i << "] " << values[i] << " ";
+		  cout << "\n";
+	  } 
+	  else if (values[i] % 2 != 0) // Check if the value is odd, used operator != to check if the value is not even
+	  {
+		  
+		  cout << "[" << i << "] " << values[i] << " ";
+		  cout << "\n";
+	  } 
+	  
+  }
+  
 
   return 0;
 }
