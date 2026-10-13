@@ -9,7 +9,7 @@ using std::cout;
 
 int main() {
   const int N = 20;
-  const int Q = 10;
+  const int Q = 20;
   int values[N];
 
   srand(static_cast<unsigned>(time(nullptr))); // Seed the random number generator
@@ -33,25 +33,27 @@ int main() {
 	  } 
 	  
   }
-  int even = values[0];
-  for (int i = 1; i < N; ++i) 
+  int even[Q];
+  for (int i = 0; i < Q; ++i) 
   {
-	  if (values[i] % 2 == 0 && values[i] > even) 
+	  even[i] = values[i];
+	  if (even[i] % 2 == 0)
 	  {
-		  even = values[i];
+		  cout << "Even: " << even[i] << " ";
 	  }
   }
-  cout << "Even: " << even << "\n";
+  cout << "\n";
 
-  int odd = values[0];
-  for (int i = 1; i < N; ++i) 
+  int odd[Q];
+  for (int i = 0; i < Q; ++i) 
   {
-	  if (values[i] % 2 != 0 && values[i] > odd) 
+	  odd[i] = values[i];
+	  if (odd[i] % 2 != 0)
 	  {
-		  odd = values[i];
+		  cout << "Odd: " << odd[i] << " ";
 	  }
   }
-  cout << "Odd: " << odd << "\n";
+  cout << "\n";
 
   return 0;
 }
