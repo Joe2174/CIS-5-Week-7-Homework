@@ -19,13 +19,13 @@ int main() {
 
   for (int i = 0; i < N; ++i) // Print the array values
   { 
-	  if (values[i] % 2 == 0) // Check if the value is even, used operator == to check if the value is even
+	  if (values[i] % 2 == 0) // operator == to check if the value is even
 	  {
 		
 		  cout << "[" << i << "] " << values[i] << " ";
 		  cout << "\n";
 	  } 
-	  else if (values[i] % 2 != 0) // Check if the value is odd, used operator != to check if the value is not even
+	  else if (values[i] % 2 != 0) // operator != to check if the value is not even
 	  {
 		  
 		  cout << "[" << i << "] " << values[i] << " ";
